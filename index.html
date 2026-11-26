@@ -1,61 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Sample Website</title>
-
+    <title>Prank 😂</title>
     <style>
         body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             font-family: Arial, sans-serif;
-            background: #f0f4f8;
-            text-align: center;
-            padding: 50px;
-        }
-
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            max-width: 500px;
-            margin: auto;
-            box-shadow: 0 4px 12px #0002;
+            color: white;
+            margin: 0;
         }
 
         h1 {
-            color: #2563eb;
+            font-size: 32px;
         }
 
         button {
-            background: #2563eb;
+            background: #ff4757;
             color: white;
             border: none;
-            padding: 12px 24px;
-            border-radius: 6px;
+            padding: 18px 35px;
+            font-size: 22px;
+            border-radius: 12px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         button:hover {
-            background: #1d4ed8;
+            background: #ff6b81;
+            transform: scale(1.1);
+        }
+
+        #komunikat {
+            display: none;
+            font-size: 35px;
+            font-weight: bold;
+            margin-top: 30px;
+            text-align: center;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Welcome to My Website!</h1>
 
-        <p>This is a sample HTML webpage.</p>
+    <h1>Kliknij przycisk 😎</h1>
 
-        <button onclick="showMessage()">
-            Click Me
-        </button>
+    <button onclick="niespodzianka()">
+        Kliknij mnie!
+    </button>
+
+    <div id="komunikat">
+        HAHAHA NABRAŁEŚ SIĘ! 😂
     </div>
 
     <script>
-        function showMessage() {
-            alert("Hello! Welcome to my website!");
+        function niespodzianka() {
+            document.getElementById("komunikat").style.display = "block";
         }
     </script>
+
 </body>
 </html>
